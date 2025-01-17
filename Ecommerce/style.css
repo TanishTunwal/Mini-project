@@ -291,6 +291,16 @@ a {
   width: 100%;
 }
 
+.img-check {
+  background-color: #f0f0f0;  /* Change the background color */
+    padding: 20px;
+    text-align: center;
+}
+.img-check img {
+  width: 100%;
+  height: auto;
+}
+
 /* Navbar Responsiveness */
 @media (max-width: 768px) {
   .section-navbar .container {
@@ -349,7 +359,6 @@ main {
   overflow: hidden;
 }
 
-/* Custom Shape Divider */
 .custom-shape-divider-bottom {
   position: absolute;
   bottom: 0;
@@ -595,143 +604,105 @@ main .section-hero {
 /***** End Policy Section *****/
 
 /***** why choose Section *****/
-.section-why--choose .grid {
-  height: auto;
-  gap: 6.4rem;
-  align-items: center;
+/* General Section Styling */
+.section-why-choose {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
 }
 
-.why-choose--div {
-  margin-bottom: 2.4rem;
-}
-
-.section-why--choose .text-align--right .why-choose--div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.section-why--choose .text-align--left .why-choose--div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.common-text--highlight {
-  color: var(--main-color);
-  width: 6rem;
-  height: 6rem;
-  background-color: var(--supporting-color);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 2.4rem;
+.section-heading {
+  font-size: 2.5rem;
   font-weight: bold;
-  margin: 0 auto;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.why-choose--div .section-common--title {
-  margin-top: 1.2rem;
+.section-subheading {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.grid-three-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.why-choose-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-number {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: bold;
+  color: #0078d7;
+  margin-bottom: 1rem;
 }
 
-.choose-center-div,
-.choose-center-div figure {
+.item-title {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.item-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.choose-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  transform-origin: center;
 }
 
-.choose-center-div figure::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 45rem;
-  height: 45rem;
+.center-image {
+  width: 100%;
+  max-width: 300px;
   border-radius: 50%;
-  background-color: var(--main-color);
-  z-index: -1;
-  animation: circle 6s linear infinite alternate;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes circle {
-  0% {
-    background-color: #b3d0ff;
-  }
-  25% {
-    background-color: #80b1ff;
-  }
-  50% {
-    background-color: #4d91ff;
-  }
-  75% {
-    background-color: #99c0ff;
-  }
-  100% {
-    background-color: #3381ff;
-  }
-}
 
-.choose-center-div figure::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50rem;
-  height: 50rem;
-  border-radius: 50%;
-  border: 0.4rem solid var(--supporting-color);
-  z-index: -1;
-}
-
-.choose-center-div img {
-  width: 80%;
-  height: auto;
-  z-index: 1;
-  animation: pulse 3s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-/* Additional Responsive Enhancements */
 @media (max-width: 768px) {
-  .section-why--choose .grid {
-    gap: 4.8rem;
+  .grid-three-cols {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .common-text--highlight {
-    width: 4.8rem;
-    height: 4.8rem;
+  .section-heading {
     font-size: 2rem;
   }
 
-  .choose-center-div figure::before {
-    width: 35rem;
-    height: 35rem;
+  .section-subheading {
+    font-size: 1rem;
   }
 
-  .choose-center-div figure::after {
-    width: 40rem;
-    height: 40rem;
+  .highlight-number {
+    font-size: 1.5rem;
   }
 
-  .choose-center-div img {
-    width: 70%;
+  .item-title {
+    font-size: 1.2rem;
+  }
+
+  .center-image {
+    max-width: 200px;
   }
 }
 
@@ -1066,7 +1037,7 @@ footer {
   font-weight: bold;
 }
 
-.productActualPrice {
+.productA ctualPrice {
   font-size: 1.6rem;
   color: #888;
   text-decoration: line-through;

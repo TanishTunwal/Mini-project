@@ -21,10 +21,10 @@
     },
     {
       "id": 3,
-      "name": "Wireless Headphones",
+      "name": "Headphones",
       "category": "Audio",
       "brand": "BOAT",
-      "price": 149.99,
+      "price": 1493.99,
       "stock": 30,
       "image": "../images/headphone.png",
       "description": "High-quality wireless headphones with over-ear design, 20 hours of battery life, and a sleek black color."
